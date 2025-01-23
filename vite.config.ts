@@ -1,7 +1,63 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path';
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-})
+/* eslint-disable import/no-extraneous-dependencies */
+import legacy from '@vitejs/plugin-legacy';
+import vue from '@vitejs/plugin-vue';
+import autoprefixer from 'autoprefixer';
+import { defineConfig, type UserConfig } from 'vite';
+/* eslint-enable import/no-extraneous-dependencies */
+
+export default defineConfig((): UserConfig => {
+  return {
+    plugins: [
+      vue(),
+      legacy({
+        targets: ['defaults', 'not IE 11']
+      })
+    ],
+
+    css: { postcss: { plugins: [autoprefixer()] } },
+
+    server: {
+      port: 9000,
+
+      proxy: {
+        '/api': {
+          target: 'https://ppr-v3.transitcard.ru/',
+          changeOrigin: true
+        }
+      }
+    },
+
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            utils: ['date-fns', 'lodash-es', 'pinia'],
+            components: []
+          }
+        }
+      }
+    },
+
+    resolve: {
+      alias: [
+        // @/xxxx => src/xxxx
+        {
+          find: /^@\/(.+)/,
+          replacement: `${resolve(__dirname, 'src')}/$1`
+        },
+        // #/type => types
+        {
+          find: /^#\/types$/,
+          replacement: `${resolve(__dirname, 'types')}`
+        },
+        // #/types/xxxx => types/xxxx
+        {
+          find: /^#\/types\/(.+)/,
+          replacement: `${resolve(__dirname, 'types')}/$1`
+        }
+      ]
+    }
+  };
+});
