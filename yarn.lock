@@ -1762,6 +1762,11 @@ update-browserslist-db@^1.1.1:
     escalade "^3.2.0"
     picocolors "^1.1.1"
 
+vite-bundle-analyzer@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/vite-bundle-analyzer/-/vite-bundle-analyzer-0.16.0.tgz#a703c6f81851c3f99536576b46d7ec0a65633fab"
+  integrity sha512-zJEXZuwqoNxBwuCLzpVLrlT3V7RPaPTlqkcHKJMaS98QIOuBMZ10XCeWQ11+lG4wc151KNkAP5xbxsp2kD+rOg==
+
 vite@^4.4.5:
   version "4.5.9"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.5.9.tgz#f4dfd4c4295743b50c3e3f90df798d70de699e4f"
