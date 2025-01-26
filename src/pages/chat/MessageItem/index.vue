@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed, type PropType } from 'vue';
 
+import type { ClassValue } from '#/types';
+
 import type { Message } from '../types';
 
 const props = defineProps({
@@ -10,7 +12,7 @@ const props = defineProps({
     },
 });
 
-const classes = computed(() => ({
+const classes = computed<ClassValue>(() => ({
     'message': true,
     'message_bot': props.message.from === 'bot',
     'message_author': props.message.from === 'author'
@@ -19,7 +21,7 @@ const classes = computed(() => ({
 
 <template>
     <div :class="classes">
-        <div class="message__grid">
+        <div class="message__flex">
             <div class="message__profile">
                 <img
                     :src="message.imagePath"
@@ -48,7 +50,7 @@ const classes = computed(() => ({
     width: 80%;
     margin-bottom: 24px;
 
-    &__grid {
+    &__flex {
         display: flex;
     }
 
@@ -107,7 +109,7 @@ const classes = computed(() => ({
     &_author {
         margin-left: auto;
 
-        .message__grid {
+        .message__flex {
             flex-direction: row-reverse;
         }
 
@@ -123,7 +125,7 @@ const classes = computed(() => ({
     }
 
     &_bot {
-        .message__grid {
+        .message__flex {
             flex-direction: row;
         }
 
@@ -131,10 +133,6 @@ const classes = computed(() => ({
             background-color: #e5edf5;
             color: #223645;
         }
-    }
-
-    & + li {
-        margin-top: 24px;
     }
 
     @media (max-width: 600px) {
