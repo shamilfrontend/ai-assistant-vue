@@ -1,9 +1,6 @@
 // vendors
 @import "vendors/bootstrap.scss";
 @import "vendors/font-awesome.scss";
-@import "vendors/feather-icon.scss";
-@import "vendors/animate.scss";
-@import "vendors/owl.carousel.scss";
 @import "utils/variables.scss";
 @import "utils/helpers.scss";
 
@@ -18,20 +15,7 @@
 @import "components/chat-box.scss";
 @import "components/tootip.scss";
 @import "components/loader.scss";
-@import "components/switchery.scss";
 @import "components/collapse.scss";
-@import "components/call.scss";
-@import "components/call-list.scss";
-@import "components/according.scss";
-@import "components/tour.scss";
 
 //layout
-@import "layout/grid.scss";
-@import "layout/sidebar.scss";
 @import "layout/content.scss";
-@import "layout/login.scss";
-@import "layout/forms.scss";
-
-// themes
-@import "themes/theme.scss";
-@import "themes/responsive.scss";

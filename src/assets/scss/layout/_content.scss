@@ -3,13 +3,11 @@
     padding: $contant-spacing;
     height: calc(100vh - 95px);
     min-height: calc(100vh - 95px);
-    overflow: auto;
     overflow-x: hidden;
     overflow-y: auto;
     background-blend-mode: overlay;
     top: 0;
     background-color: $primary-light;
-    display: none;
     animation: fadeInLeft 300ms ease-in-out;
 
     &.active {
@@ -28,28 +26,6 @@
 
       .col {
         position: unset;
-      }
-
-      .search-form {
-        z-index: 9;
-        top: -10px;
-        left: 0;
-        position: absolute;
-        height: 80px;
-        width: 100%;
-        transform: scale(0);
-        transition: all 0.3s ease;
-
-        &.open {
-          transform: scale(1);
-          transition: all 0.3s ease;
-          top: 0;
-          height: 100px;
-        }
-
-        input {
-          border: none;
-        }
       }
 
       ul {
@@ -442,22 +418,6 @@
       span {
         display: block;
         font-size: 16px;
-      }
-    }
-  }
-}
-
-.menu-active {
-  .chitchat-main {
-    .message-input {
-      width: calc(100% - 850px);
-      transition: all 0.9s;
-    }
-
-    .messages {
-      .contact-details {
-        width: 50vw !important;
-        transition: all 0.9s ease;
       }
     }
   }
