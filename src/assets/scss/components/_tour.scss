@@ -1,11 +1,12 @@
-.introjs-tooltipReferenceLayer{
-  .introjs-tooltip{
+.introjs-tooltipReferenceLayer {
+  .introjs-tooltip {
     padding: 25px;
     background-color: $primary-light;
     color: $primary-color;
   }
-  .introjs-helperNumberLayer{
-    text-shadow : none;
+
+  .introjs-helperNumberLayer {
+    text-shadow: none;
     width: 25px;
     height: 25px;
     line-height: 24px;
@@ -13,40 +14,50 @@
     top: -10px;
     left: 10px;
   }
-  .introjs-tooltip{
+
+  .introjs-tooltip {
     box-shadow: -1px 10px 16px -10px $primary-color;
     border-radius: 15px;
     border: none;
   }
-  .introjs-arrow{
+
+  .introjs-arrow {
     &.left {
       left: -21px;
       border-width: 11px;
       border-right-color: $primary-light;
     }
-    &.left-bottom{
+
+    &.left-bottom {
       border-right-color: $primary-light;
     }
-    &.right{
+
+    &.right {
       border-left-color: $primary-light;
     }
   }
 }
+
 .introjs-helperLayer {
   border-radius: 15px !important;
 }
-.introjs-tooltip{
+
+.introjs-tooltip {
   background-color: $primary-light;
   color: $primary-color;
-  .introjs-tooltipbuttons{
+
+  .introjs-tooltipbuttons {
     text-align: left;
   }
+
   .introjs-bullets {
     text-align: left;
-    ul{
-      li a{
+
+    ul {
+      li a {
         background: rgba($primary-color, 0.20);
-        &.active{
+
+        &.active {
           background-color: $primary-color;
           border: 3px double $border-color;
           margin-top: -3px;
@@ -54,9 +65,10 @@
       }
     }
   }
-  .introjs-button{
+
+  .introjs-button {
     border-radius: 15px;
-    padding: 0px 15px;
+    padding: 0 15px;
     line-height: 2.2;
     background-color: $primary-color;
     border: none;
@@ -64,19 +76,23 @@
     background-image: none;
     text-shadow: none;
     color: $white !important;
-    &:focus,&:active{
+
+    &:focus, &:active {
       background-color: darken($primary-color, 10%);
       background-image: none;
     }
-    &.introjs-prevbutton{
+
+    &.introjs-prevbutton {
       border-radius: 15px 0 0 15px;
     }
-    &.introjs-nextbutton{
+
+    &.introjs-nextbutton {
       border-radius: 0 15px 15px 0;
     }
   }
 }
-.introjs-tooltiptext{
+
+.introjs-tooltiptext {
   font-weight: 500;
   font-size: 16px;
 }

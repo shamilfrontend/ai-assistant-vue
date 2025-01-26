@@ -1,4 +1,4 @@
-.custom-dropdown{
+.custom-dropdown {
   height: 0;
   width: 0;
   position: absolute;
@@ -13,63 +13,75 @@
   border-radius: 15px;
   top: 85px;
   transition: all 0.3s ease;
-  &.open{
+
+  &.open {
     opacity: 1;
     transition: all 0.3s ease;
     height: 200px;
     width: 300px;
   }
 }
-.onclick-dropdown{
+
+.onclick-dropdown {
   cursor: pointer;
 }
+
 // emojis start //
 .emojis-main {
   position: relative;
   display: flex;
-  .toggle-sticker{
-    img{
+
+  .toggle-sticker {
+    img {
       height: 30px;
     }
   }
-  .toggle-sticker{
-    svg{
+
+  .toggle-sticker {
+    svg {
       height: 50px;
       width: 50px;
       fill: $primary-color;
-      path{
+
+      path {
         stroke: $primary-color;
       }
     }
-    &.active{
-      svg{
+
+    &.active {
+      svg {
         fill: $white;
-        path{
+
+        path {
           stroke: $white;
         }
       }
     }
   }
-  .emojis-contain,.sticker-contain  {
+
+  .emojis-contain, .sticker-contain {
     width: 0;
     height: 0;
     background-color: $white;
     position: absolute;
     bottom: 0;
-    left: 0 ;
+    left: 0;
     padding: 35px;
     transform: scale(0);
     transition: all 0.3s ease;
-    &.open{
+
+    &.open {
       bottom: 85px;
       transform: scale(1);
       transition: all 0.3s ease;
       width: 420px;
       height: 280px;
     }
+
     .emojis-sub-contain {
       height: 100%;
-      overflow: overlay ;
+      overflow: overlay;
+
       &:before {
         content: "";
         position: absolute;
@@ -82,6 +94,7 @@
         left: 70px;
         z-index: 1;
       }
+
       ul {
         li {
           display: inline-block;
@@ -91,12 +104,15 @@
         }
       }
     }
+
     .sticker-sub-contain {
       height: 100%;
-      overflow: overlay ;
+      overflow: overlay;
+
       ul {
         li {
           display: inline-block;
+
           img {
             width: 45px;
             height: auto;
@@ -105,8 +121,10 @@
       }
     }
   }
+
   .contact-poll {
     transition: all 1s ease;
+
     .contact-poll-content {
       position: absolute;
       bottom: 85px;
@@ -115,6 +133,7 @@
       padding: 30px;
       transition: all 1s ease;
       display: none;
+
       ul {
         li {
           margin-bottom: 15px;
@@ -124,19 +143,23 @@
           font-weight: 600;
           padding-left: 30px;
           transition: all 0.5s ease;
+
           &:last-child {
             margin-bottom: 0;
           }
+
           a {
             color: $dark-color;
             transition: all 0.3s ease;
-            svg{
+
+            svg {
               width: 18px;
               margin-right: 15px;
               position: absolute;
               left: 0;
             }
           }
+
           &:hover {
             a {
               color: $primary-color;
@@ -145,6 +168,7 @@
           }
         }
       }
+
       &:before {
         content: "";
         position: absolute;
@@ -160,11 +184,12 @@
     }
   }
 }
+
 // sticker gif //
-.main-nav{
-  .status{
-    > div{
-      &:before{
+.main-nav {
+  .status {
+    > div {
+      &:before {
         content: "";
         position: absolute;
         height: 100%;
@@ -177,16 +202,18 @@
       }
     }
   }
-  .user-popup{
+
+  .user-popup {
     height: 43px;
     width: 43px;
     padding: 3px;
     border-radius: 100%;
     margin: 0 auto;
     position: relative;
-    &.two{
-      > div{
-        &:after{
+
+    &.two {
+      > div {
+        &:after {
           content: "";
           position: absolute;
           height: 3px;
@@ -198,9 +225,10 @@
         }
       }
     }
-    &.three{
-      > div{
-        &:after{
+
+    &.three {
+      > div {
+        &:after {
           content: "";
           position: absolute;
           left: -6px;
@@ -214,7 +242,8 @@
         }
       }
     }
-    > div{
+
+    > div {
       height: 37px;
       width: 37px;
       border-radius: $radious100;
@@ -226,15 +255,17 @@
 // chat frind popup //
 .chat-friend-toggle {
   position: relative;
+
   .chat-frind-content {
     position: absolute;
     top: 80px;
-    right:0;
+    right: 0;
     padding: 25px;
     background-color: $white;
     text-align: left;
     display: none;
     text-transform: capitalize;
+
     ul {
       li {
         margin-bottom: 15px;
@@ -243,19 +274,22 @@
         display: inline-flex !important;
         align-items: center;
         height: 30px;
+
         a {
           position: absolute;
           left: 0;
         }
+
         &:last-child {
           margin-bottom: 0;
-          padding-top:20px;
+          padding-top: 20px;
           border-top: 1px solid $border-color;
           height: 34px;
 
         }
+
         &:before {
-          border-left:5px solid $primary-color;
+          border-left: 5px solid $primary-color;
           content: "";
           position: absolute;
           top: 0;
@@ -265,10 +299,12 @@
     }
   }
 }
-.user-status{
+
+.user-status {
   position: relative;
   padding: 4px;
-  &:before{
+
+  &:before {
     content: "";
     position: absolute;
     height: 100%;

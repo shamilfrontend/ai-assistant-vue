@@ -151,6 +151,48 @@
                             </div>
                         </div>
                     </li>
+
+                    <li class="message message_author sent">
+                        <div class="message__grid">
+                            <div class="message__profile">
+                                <img
+                                    src="/images/avtar/arthur.jpg"
+                                    alt="Avatar"
+                                    class="message__avatar"
+                                />
+                            </div>
+
+                            <div class="message__content">
+                                <h5 class="message__name">Артур Хидирнабиев</h5>
+                                <ul class="message__list">
+                                    <li class="message__item">
+                                        Loading
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="message message_bot replies">
+                        <div class="message__grid">
+                            <div class="message__profile">
+                                <img
+                                    src="/images/avtar/ai.webp"
+                                    alt="Avatar"
+                                />
+                            </div>
+                            <div class="message__content">
+                                <h5 class="message__name">AI Assistant</h5>
+                                <ul class="message__list">
+                                    <li class="message__item">
+                                        <div class="type">
+                                            <div class="typing-loader" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
@@ -160,14 +202,15 @@
                         class="setemoj"
                         id="setemoj"
                         type="text"
-                        placeholder="Write your message..."
+                        placeholder="Текст сообщения..."
                         autocomplete="off"
                     />
 
                     <button
+                        type="button"
                         class="btn btn-primary"
                     >
-                        <i class="fa fa-send"/>
+                        <i class="fa fa-send" />
                     </button>
                 </div>
             </div>
@@ -175,7 +218,8 @@
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <style lang="scss" scoped>
 .chat-page {
@@ -291,6 +335,12 @@
         font-weight: 600;
         border-radius: 20px;
         font-size: 14px;
+
+        .typing-loader {
+            &::before, &::after {
+                box-shadow: 0 40px 0 #f0f;
+            }
+        }
     }
 
     &_author {
