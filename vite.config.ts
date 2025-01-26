@@ -3,16 +3,12 @@ import vue from '@vitejs/plugin-vue';
 import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
 import { defineConfig, type UserConfig } from 'vite';
-import { analyzer } from 'vite-bundle-analyzer';
 
 export default defineConfig((): UserConfig => {
     return {
         plugins: [
             vue(),
-            legacy({
-                targets: ['defaults', 'not IE 11']
-            }),
-            analyzer(),
+            legacy({ targets: ['defaults', 'not IE 11'] })
         ],
 
         css: {
